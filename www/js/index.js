@@ -1,4 +1,5 @@
-$(function () {
+var renderPie = function(jsondata) {
+    console.log ('inside the method'+ jsondata);
     $('#container').highcharts({
         chart: {
             plotBackgroundColor: null,
@@ -27,19 +28,43 @@ $(function () {
         series: [{
             type: 'pie',
             name: 'Browser share',
-            data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
-            ]
+            data: jsondata,
         }]
-    });
+     
+    
+});
+}
+
+
+
+$(document).ready(function(){
+ 
+ $.ajax({
+    type: "GET",
+             dataType: 'jsonp',
+             url: "http://104.131.60.8:3010/radio/",
+             
+             crossDomain : true , 
+             success: function(jsondata) {
+                  var jsonstring = JSON.stringify(jsondata);
+                 // var json_data_array = $.parseJSON('[' + jsonstring + ']');
+                 
+                 // assign the jsondata to a global variable for external visibility
+
+                 // call the method which would render chart
+                 renderPie(jsondata);
+
+                 // assign the global variable's value to the "series"
+
+
+                  //alert('success'+ jsonstring);
+             },
+             error: function(xhr, textStatus, errorThrown){
+             //  $("#conversion-progress").hide();
+             //  $(".container").show();
+      
+                alert('request failed '+textStatus+" "+errorThrown);
+               // fillCreditCardFieldsOnError();
+            }
+          });
 });
