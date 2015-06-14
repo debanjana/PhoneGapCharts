@@ -47,24 +47,17 @@ $(document).ready(function(){
              crossDomain : true , 
              success: function(jsondata) {
                   var jsonstring = JSON.stringify(jsondata);
-                 // var json_data_array = $.parseJSON('[' + jsonstring + ']');
-                 
-                 // assign the jsondata to a global variable for external visibility
-
+             
                  // call the method which would render chart
                  renderPie(jsondata);
 
-                 // assign the global variable's value to the "series"
+             
 
-
-                  //alert('success'+ jsonstring);
+                
              },
              error: function(xhr, textStatus, errorThrown){
-             //  $("#conversion-progress").hide();
-             //  $(".container").show();
-      
                 alert('request failed '+textStatus+" "+errorThrown);
-               // fillCreditCardFieldsOnError();
+             
             }
           });
 });

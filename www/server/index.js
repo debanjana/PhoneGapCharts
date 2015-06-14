@@ -1,20 +1,9 @@
 SERVER_PORT = 3010 ;
-var request = require("request");
-var app = require('express')();
+var request = require("request"); // 
+var app = require('express')(); // express web framework for node js
 var http = require('http').Server(app);
-/*
-var url = ""
 
-request({
-    url: url,
-    json: true
-}, function (error, response, body) {
 
-    if (!error && response.statusCode === 200) {
-        console.log(body) // Print the json response
-    }
-})
-*/
 
 var fs = require('fs');
 var raw_json = JSON.parse(fs.readFileSync('community_radio_raw.json', 'utf8'));
@@ -50,7 +39,7 @@ app.get('/radio',function( req,res ){
  		pi_chart_data.push(s);
 
  	}
-	//console.log(  )
+	
 	res.jsonp(pi_chart_data);
 });
 
