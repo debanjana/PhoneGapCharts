@@ -1,0 +1,37 @@
+
+.body{
+  /*display: table;*/
+}
+.navbar {
+  position: relative;
+  min-height: 7%;
+  margin-bottom: 5%;
+  }
+
+
+.secondRow{
+  height: 80%;
+
+}
+
+/* CSS used here will be applied after bootstrap.css */
+
+
+.topBar{
+  
+  height: 20%; 
+ 
+}
+.topBarSepDes{
+  
+  margin-left: 25%;
+  margin-right:2%; 
+  background-color: rgba(47, 166, 181, 0.54);
+  font-size: 3em;
+}
+
+
+
+
+
+
