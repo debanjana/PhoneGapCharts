@@ -1,4 +1,4 @@
-SERVER_PORT = 3000;
+SERVER_PORT = 3010 ;
 var request = require("request");
 var app = require('express')();
 var http = require('http').Server(app);
@@ -51,7 +51,7 @@ app.get('/radio',function( req,res ){
 
  	}
 	//console.log(  )
-	res.json(pi_chart_data);
+	res.jsonp(pi_chart_data);
 });
 
 http.listen(SERVER_PORT, function(){
