@@ -7,7 +7,7 @@ var renderPie = function(jsondata) {
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'State wise distribution of Community Radio in India '
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
