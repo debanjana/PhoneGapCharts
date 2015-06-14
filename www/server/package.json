@@ -1,0 +1,16 @@
+{
+  "name": "gov-data-wrapper",
+  "version": "0.0.1",
+  "description": "Pulls data from Indian Govt's Open Data portal and serves the restructured data strcutures for rendering using highcharts",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~4.12.4",
+    "request": "~2.57.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "github.com/sbose78 and github.com/debanjana",
+  "license": "MIT"
+}
